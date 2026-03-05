@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Aplicaciones adicionales
+    'rest_framework',
 
     #Aplicaciones propias
-
     'core',
 ]
 

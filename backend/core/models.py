@@ -10,7 +10,6 @@ class Category(models.Model):
     monthly_budget = models.DecimalField(max_digits=10, decimal_places=2, null=True, validators=[MinValueValidator(0)],blank=True, verbose_name="Presupuesto")
 
 class Movement(models.Model):
-
     class MovementType(models.TextChoices):
         INCOME = "INCOME", "Ingreso"
         EXPENSE = "EXPENSE", "Gasto"
