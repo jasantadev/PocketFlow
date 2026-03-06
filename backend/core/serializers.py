@@ -5,7 +5,6 @@ from django.db.models import Sum, Value
 from django.db.models.functions import Coalesce
 
 
-
 class UserSerializer(serializers.ModelSerializer):
     balance = serializers.SerializerMethodField()
     class Meta:
@@ -22,6 +21,7 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ('title', 'description', 'monthly_budget')
+        
 
 class MovementSerializer(serializers.ModelSerializer):
     class Meta:
