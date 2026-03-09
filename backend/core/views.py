@@ -21,7 +21,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
         if not user.is_authenticated:
             return Category.objects.none()
         else:
-            return Category.objects.filter(user=user)
+            return Category.objects.filter(owner=user)
         
 
 class MovementViewSet(viewsets.ModelViewSet):

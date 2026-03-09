@@ -5,15 +5,15 @@ from .models import Category, Movement
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     model = Category
-    list_display = ["user", "title", "monthly_budget"]
-    list_display_links = ["user"]
-    list_filter = ["user"]
-    search_fields = ["user__username", "title"]
+    list_display = ["owner", "title", "monthly_budget"]
+    list_display_links = ["owner"]
+    list_filter = ["owner"]
+    search_fields = ["owner__username", "title"]
 
 @admin.register(Movement)
 class MovementAdmin(admin.ModelAdmin):
     model = Movement
-    list_display = ["user", "amount", "category", "date", "type"]
-    list_display_links = ["user", "category"]
-    list_filter = ["category", "user", "date", "type"]
-    search_fields = ["user__username", "date"]
+    list_display = ["owner", "amount", "category", "date", "type"]
+    list_display_links = ["owner", "category"]
+    list_filter = ["category", "owner", "date", "type"]
+    search_fields = ["owner__username", "date"]
