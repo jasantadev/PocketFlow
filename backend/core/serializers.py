@@ -27,3 +27,12 @@ class MovementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movement
         fields = ('amount', 'category', 'date', 'description', 'type')
+
+    def validate_category(self, category):
+        if category == None:
+            return category
+        
+        if category.user != self.context['request'].user:
+            raise serializers.ValidationError("Esa categoria no pertenece a ese usuario")
+        
+        return category
