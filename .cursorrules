@@ -1,0 +1,29 @@
+# 📅 AGENT.md - PocketFlow
+
+## 📖 Contexto del Proyecto
+Este proyecto es un sistema de gestión de movimientos financieros enfocado en que sea simple llevar un control de tus gastos personales y optimizar tu flujo de dinero.
+
+* **Backend:** Supabase + Next.js + TypeScript
+* **Frontend:** Next.js + React + Tailwind CSS + TypeScript.
+* **Base de Datos:** PostgreSQL.
+* **Control de Versiones:** Git + GitHub
+
+
+> [!IMPORTANT]
+> **Deuda Técnica:** El código generado sin tests se considera deuda técnica por diseño. No se aceptan implementaciones de lógica sin su suite de pruebas.
+
+---
+
+## 🚀 Pull Requests (PR)
+
+1.  **Formato de Título:** `[Backend/Frontend] <Descripción concisa del cambio>`.
+2.  **Requisito de Merge:** Pasar todos los checks de CI en `.github/workflows`.
+3.  **Documentación Viva:** Actualizar `spec.md` si cambia la lógica de negocio (Metodología *Spec-Anchored*).
+
+---
+
+## 🚫 Reglas de Estilo y Prohibiciones
+
+* **No Push directo a Main:** Todo cambio requiere un Pull Request.
+* **React Components:** Usa componentes funcionales y hooks. Prohibidos los "God Components" (si crece, divídelo).
+* **Context Management:** Mantén las tareas enfocadas. No mezcles reglas de diseño de React en tareas de Base de Datos.
